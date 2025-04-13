@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Hotspots of Amritsar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+    <img src="https://media.cntraveller.in/wp-content/uploads/2019/11/D8R9MT-1366x768.jpg"alt="GoldenTemple">"
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Amritsar</h1>
+                <p>Home to the Golden Temple and rich Sikh heritage, Amritsar is a spiritual and cultural marvel.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <p class="quote">"A city of faith, valor, and heritage, where history meets devotion."</p>
+    </div>
+
+    <div class="about-section">
+        <h2>Discover Amritsar</h2>
+        <div class="about-content">
+            <p>Amritsar, the spiritual and cultural hub of Punjab, is renowned for its iconic Golden Temple and historic landmarks.</p>
+            <p>From the Wagah Border ceremony to the historic Jallianwala Bagh, Amritsar offers a unique blend of history, culture, and spirituality that captivates visitors.</p>
+        </div>
+    </div>
+
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Amritsar</h2>
+        <div class="attractions-grid">
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/236x/88/eb/28/88eb28ca77a118d8526a7c5a0cd81401.jpg" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Golden Temple</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">A sacred site and the holiest Gurdwara of Sikhism, offering peace and divine blessings.</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/236x/6b/1a/19/6b1a19bc812359b3d122d1fc6234eb3a.jpg" alt="Jallianwala Bagh" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Jallianwala Bagh</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">A memorial of India's struggle for independence, preserving the tragic history of 1919.</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-jMKFYCW24oM9griWpDGHz4a4IYWSlNu9Lw&s" alt="Wagah Border" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Wagah Border</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Witness the thrilling Beating Retreat ceremony, a symbol of Indo-Pak camaraderie and patriotism.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

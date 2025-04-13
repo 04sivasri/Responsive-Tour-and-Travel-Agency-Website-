@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 240px; /* Fixed height for consistency */
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-container {
+            width: 200px;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            stroke: #666;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .heart-icon.active svg {
+            fill: #ff0000;
+            stroke: #ff0000;
+        }
+
+        .hotel-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hotel-details {
+            flex-grow: 1;
+        }
+
+        .tourism-place {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .amenities {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.5;
+            font-size: 14px;
+            height: 120px; /* Fixed height for descriptions */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+        }
+
+        @media (max-width: 768px) {
+            .hotel-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 200px;
+            }
+
+            .description {
+                height: auto;
+                -webkit-line-clamp: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hotel-list">
+            <!-- Mumbai Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="cultural hotspots/amritsar.html">
+                        <img src="https://assets.thepackersmovers.com/images/city/amritsar-city-information.jpg" alt="Gateway of India">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Amritsar</h2>
+                        <div class="amenities">
+                            <span>🏛️ Golden City</span>
+                        </div>
+                        <p class="description">Amritsar, a city in the Punjab state of India, is known as the Golden City. The city's nickname comes from the Golden Temple, also known as Harmandir Sahib, which is located there.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bengaluru Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="cultural hotspots/jodhpur.html">
+                        <img src="https://im.hunt.in/cg/Jodhpur/City-Guide/blue07.jpg" alt="Bengaluru Tech Hub">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Jodhpur</h2>
+                        <div class="amenities">
+                            <span>Blue City</span>
+                        </div>
+                        <p class="description">Jodhpur is known as the Blue City because all of the buildings in the oldest district are painted in a light shade of blue. This district lies to the north of the city and the colour scheme is almost uniform. The best vantage point to view the blue painting of Jodhpur is from the Meherangarh Fort's battlements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delhi Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="cultural hotspots/mysore.html">
+                        <img src="https://eastindiantraveller.com/wp-content/uploads/2021/02/mysorepalacesideview.jpeg?w=640" alt="India Gate">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Mysore</h2>
+                        <div class="amenities">
+                            <span>City of Palaces</span>
+                        </div>
+                        <p class="description">Mysore, also known as Mysuru, is called the "City of Palaces" because of its many palaces and heritage structures. It is also known as the "Cultural Capital of Karnataka" and the "Heritage City" </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hyderabad Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="cultural hotspots/tanjavur.html">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRUVFhUWFhUVFRYVGBYWFxYWFxUYFhUYHSggGBolHRUVITEhJSkrLi4uGB8zODMsNygtLisBCgoKDg0OFxAQGislHx0tLS01LS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstKy0tLf/AABEIASsAqAMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAADBAECBQAGBwj/xABBEAABAwIDBQUGBAQFAwUAAAABAAIRAyESMUEEUWFxgQUikaGxBhMywdHwFELh8VJicoIHFSMzUxZEwkNUkqLD/8QAGwEAAwEBAQEBAAAAAAAAAAAAAAECAwUEBgf/xAAsEQACAgEDBAEBCAMAAAAAAAAAAQIREgMhMQQTQVEiYQUUcZGh0eHxQlKB/9oADAMBAAIRAxEAPwDw0KIRIXQvSeBgiF0IkKIVEUUhThV4XQnYUVwqsIsKIQSDhdCvhU4VQgcKCEXCoIQDQIhVIRS1VITRDKQqkIsKpCZLBQoRCFUhMzKqFaFyBlIUqVyQ7NGF0K0KYWB7ikKMKJC6ExUDwqcKIAuwpiBwuwouFdhTRDBYVOFEwqcKoQLCoLUbCowoEALVUtRy1VLUyGAwriEbCqlqZNAC1UIRyFQtTJaAqIRCFWEyCq5WhQgLNOF0K8KQF5Tp0UhSArwpDUxUUwqQ1EDVYNTQmDwqQxGDFcMTFQvgXe7TOBdgVJkuIrgUFqZwKCxMzoVLVUtTJYqlqYqFi1VLUwWqjmoELlqGQmHNQnBMlgHBUIR3BDITRk0DUqSFyZBqgK0KYUgLxnYogBWDVICI1qoVFWtVw1XaxEDEyWigYrhiI1quGphQHAuwI+FdgTE0LYFBYmS1VLVVkOIqWIbmptzUNzVVmbQqWobmppzUJzUEirwhOCae1Bc1BLQsQqEI7moRCozkgRC5WIXJkUa4CsGqQERoXiOy0UDUVjVLWozGpklWtRGtV2sRWsVCoo1quGojWK4YmFAcK7Cj4FxYgVCxaoLUxhUFidktCrmITmptzUJ7VSZDQo5qG5qac1Cc1UZNCrmoL2ptzUF7UyaE3BCcEy8ID0yJAXBcrOC5Mzo2GhEY1c1qMxi8R2aJYxHYxdTYmWMTsKKNporWIrGIrWIsMQIpqwYjhinAnYULmn8/OPouLEzgUFiaYnEWwKpYmSzr4KpYqshoUcxCc1OuagvamjNoSe1Bc1OvagOaqM2hV7UB7U49qXqNVENCbwlnhOvalqjVRnJCrlyu4LkzM32MTFOmrU6Sap0lzsjt4spTppllNXp0kzTpIyGogW00ZtNHbSRG00ZDxF/drvdpsMU4E8go8/7Q9rN2WmKhaXFzsLW5SYJMmLAALx+w+2NRtRzqlNuGo9hdGIYAA1hIznutnn4LU/xD7SpOw7MBiex2JxBIwmCMOXekOk3tAXin0hG62Y0kcEsiWfYAJVSxK+zXajNpogj42ANqN3GLHiDBvzWoaa1TJcRJzEB7VoPYgPYrTM3EQc1Be1PPYgPYqTMnESe1Ae1PvYgPYqTIcTPqMS1Ri0ajEtUYqszcTPe1cmHsUIsnA9ZRop2lQ4JihsqfobIuP3Ed9QFKWzJlmyrQpbKmqezI7hWBljZVP4dbP4YKDsyO4GKMQ0kvt1dtGm+q42Y0uPGMh1Nuq3amyrwH+J/aGBjNmab1DjfBHwN+EEZ3N9B3VanZMkkrPnG0VXVajqrzdzsRneTl6eSioy8cBv3DfzRGNsTuBvp46XCJXZd2sHfOjTrn0Wlnmoe9ie0fc7U1pMMqjA7OA4/AYGswL/xFfU8C+KPpmxEgg5iZF7csvJfX/ZvtAbTs7KkjFEPAMw8Z5+PVVY0g72ID2LQfTQX01akS4mdUppZ7FpVGJd9NaKRm4CDmIL2J5zEF7FWRDgZ72JaoxaNRiWqMTshwM57FyPUauRkTgfTKNBO0qK6hTT1Jq+bjqHdaoGykjCmitCwe0fayjs1V1LaWupANDmVCQWVAbAB35XTNnQLZ3W0ZWQ2bgYuLF5zt2o07TRY+q6HmaQYcDqZAEOa8fHiP5D+XFNpBzfaj2rdSbUHuG1mMLMFRlUjG8OuAGCWvBBtkQDndWnZDlRs+0XtHR2SGvBc9wlrGwJA+K5ygSei+L+0HaH4raqtfvYXu7oi4piGNsMrR1K9r7U9sE7LFSm9r3NphrXHE0B3fe/vCSQ2MRaTdwB4eDq0TIDe9JGFo5gkndAB8VvpmcnYvSYIvyzOZwWtlre2SdqUwA4yJJMzeBYRE652KoGtbEkQcBn4iAAdBYGw/YKdo2mJhwIkuGQJGZzt1y8Vo2CSXIsWTMggAnvaab9f1Xpv8P+1G0KrqVRwayoC6S4ANc0SSZvcCOgWTRoucMQaBIkOdJMbg0Zaapfa6ECSZN4mAJ4AclHcV0adtpWfZS0HIzl5iRPRAqU18i2DtLaaLpp1HgYhINxDRiaIOk+q+g+xfblXbBUFRrcTMJxNsCHF0CNIw71plRNKRqvYl3sWpUo8Eu+iqUyXpGa+kgPprSdRQn0Va1CHpsyqlNK1Ka1qlEpWrSVKZm9NmTUYuTNWmuTyIxPp9JqbpsS1Ep2mvh9LrfqdXUZhe1GzbY73X4OoWuLi10juAG+JxuREaA56a+S9p27VV9wJplze4572+5NR0QWtNUQ6nJFy3iNy+otKx/ans731F4Dw15Y5rA8gMxOyN9dJ4roaXV8HnT3pnxvZO29s2cnY3OB9wKjWYSIeWkYpqSCGAtnCBcYxEkKdk7Scxleqaj3tcGNbTlzAKzmYwSHtJ920GxkFwDd8L0m3eylMsfUoPpV6rWtZ7kim0h8AS4twAFpa4gGb5zJXnO1vZk7MzHUe1z3Uye87D7txgAtDQMVQ4XSBnIJhdTT1tOf4icGZPbPataoGtc8YKeGB7z3xmAJLpkt7ogaLP2WuS4XAEwBpEZ7klWe4loLpu4OvMwZJnWxHmnNlDrd0hx+E4iG2zvfHyXsxSR5reRpbDUfLnQDh+EACBlJ7wnXdvWa6s9zxIjFcWuBEg87T+6YZtNYOhxAkmwgOmwuMwLJY1n4viH5jJbEHM313zCSW5pOd0tzabtzKbcLnNJkkhpNQ8rZdSl6r/AHrHGHAXALgNxGQOamlR/wBJrnFvf7xtecLuVpAPVMup/wCkTJkAFxuO9fWL2hZOKW65PTGUpKnwZLqGHCW2xupgx/M10RkRkFp9hds1tjqOfTDHF3dcHtIxAX4GeIjqlK20ObTZI/4xDjEWuYI0shVttpn+Y64QT+nmreTXBHxT5N3b/wDEHaqhqBjWUw4BozcWRMlpyxGcyLQOa+g+zNR1XZKNWoQ5zmSSBGRIy6L4k4AGSY4C5XpOzfbvaaFBlCk2nhZMOc0udcl38QGZ3IlCVbCjqK9z6pUpIFSkvjtf2m26o7E2vWBk/C4gf/Ed3yWftdWvU/36tR2v+pUc/wAiYTWm/LB6q8I+tbf2rs9P469NvAvbPhMrB2z2w2RuTy8/yMcfMwF85bRA1twAMKfdAxBK0UUjJzbPVbV7bN/JQd/e4N9JUryjaY1GW9cq2JuXs/TlJNU3L46z/ETanMYA1jSIJdnjjeMgDGi+odk9oe/2dlUEA1GA8A4iI6H0X5l1f2d1HSJSn5dbM6MvkrQ7twqFvccGgXcQ0udAvDQCLmI68L+U9o+29kc/BUIqQWhhIdLXD4gWgAEctSLHT1fZtOplVex/ENLcsjBJv6QhdreydKrTcGlzXOvixETaIJFw2Jtkut9maM9bSbj8seadfl/RlGUIz+R8l7To7TsuLaKNUgOOGo0AUxfFIFNxN+9lB3rG7ap1fw9IuNWDJAeWvaBdowPkudIDZFhJNhYL1PaT6rYoMqd5vwVGsc55AIIYG5EGxyEYRK8L2gwsZ/uGQ57TTuBBLpcGky0b7C8813uim5pN1/Br1UMLM5wwtJnFBAGsAtdPHQJnY9pLnBkA2gG5AmLxkEB1m2IOKAQ4AaiRfkEV9UCJFy3vEASLkGDF8v2suvyjl8D1d72k1AaeUFzTimQ64AymD0ISrXBzruJaMzaSDnnlmVbZKIIc73hEAghzrmNMoieKXrVRIkDzjS/OISxBtjR2kgQxkNgfEYi1t85pjYi/8xkiDuAJy0jTnxS1GrgdbIZjS1gd2c/YVaoJpPEuce8TYmYPdM7ohJmsRv8AE3OKMIvLu82b3AdPigbRXJIMNjM2ABuNGganfomH0x7qoIJkHDblAE/d0vs/wNECQ1t5boL65zdJFtC7qxe0kERYw3IToAVWnXk4cOH9pN0bYWhrA0gWzBeBqTlG8qjqrRULm4YIA1iwjnoq+hAjtDyJAcfjzBN0Wk4+7GRsR5lCqwXEzaZtMIlCoAIAJz0JzCp8C8l8NsuSG+zTwnz/AFVmnWc9Ax2fOFJJg903A4ag6pAKscS1crvF939zfquVCNSrtTGENNIk4cRPvb5TeGcE1sntA5re62qGiIArQL/28SoHY5dckgxEuaSfXmpodktFjV6e7PzK8spaM1TaZvHUmnszVoe0r2f+pVbfLETfnadVps9syR3qz3QPzPOUx6rDPYtB0Yq785s0Z+KYodh7LBb7w3EXa3jqTbPyXml03Ty5rc9cOomvR239pNqO94yo5tQBzcQJGl7jVebNEEuLiHQb6SNYjmvV/wDTFL3Za2rmLSD8gsep2A6i9kvEVO4XQ4hjviE78iJ5r06OnDTVRMeonObuRi7NSOKJmJA169VrUqDi64IhgExblnmQF3YfYRrNNUVA0Y3BpgjEB+a2QmbLS/6Vd/7hp6kfea3dHlUH6MV+wguGmK5dbAG6E3soaQ1wIaCWghpGWLfINyNNMuu2fZqpAa2rTgfzNvxOU9VR3spUMd5pgzALb9QZhUmkS4P0JN2V9jJyH5xnrlCinsQAON7YM2JcZ6CoPsrTd7OVRnTafA+pUDsCsLig2Ry+qVfUun6M9uxNM3abbn+heVD9jbfvC38oPqCnH+z1bP8ADtJ+9yXPYNYf9r/9X/RFDp+hGrQp/wDIOjWD/wDNDcKYsavy9GhPO7Grj/to/sf9FV3Zdb/gA/tf9ECpmTtDmfxkiN5OfNDpPp/mPr9VpVOzKs3pgf2uHySr+x6n8Ma5FPYTjL0DilpHWPQlVLqX7Bp+aONjePyt8CuGzu1Y3zQGLF8VP7DfqoRXUXfwjxXIFTPRGvxjqR6I1Gq0Zkn+53zKyATu80RjSc4j+mfmuQ9BURkatTtTZ2fE4TuEk+SQ2j2qpD/bpT/UfkgDZWnRvg35WVqWzUp75EfytJPjBCI9NoLeSb/7+w82w1D2spkjHQEbwfQEJn2g2ujU2c+6BJcf6YDQXmRH8o8VOy1aDf8AbotneRJ8x9FTtM060Avc3MYW4WjvQHWAM5K1DSjNSimqK8cmvsOxU6dOm3/UBDWglrnC8X1yklHdAyfU6mT5hY/Z3ahpd33z6jQLB4Bjk7MrUHtAdG+ajGV3kzSOFc0VdUefhefBhnxCx3bFt4re8a+aZeHe7FW0SJEEBoncLXW2O2ic2DxVdq7SJiPLEeipa04cO/xJlj4lZxrVhc0WtG8vDj4NUO28gxhA3yHDwOiE7tFw0J5j6qre03TGDjoT5GQjv6jJc5ew34p+jRGhDz59wjzUs2twnEHTphe0z4hqWfthPw03HhhtzJhFpGofipO6PZ5XCvvTW4dyXssO0XH8lXoaZ/8ANVPad7moNN/oSjfhGHOepJPiChnYmiwjqJ9UvvTH3JlG9pAn4nji5rh1mFH44f8AKPEhDq7I0/FhtvAPqEvW2JouPENyVrqR96Q2/aTc+9FuXzQnV3G/vG+LR8llVaDJkuPpJ8VQ02TN/FaLWJ7zNF1Zx1B6Bcs0xlB6x5WUKu6HdKtonWPL5qQBvaOc5DNJUWk54TN80VtAAxMajXzWbX1MjUp7KCNL7iPmUansYEAuHIiDw1WOHgcOJHzCHXrGLOJGpi3jKz7cn5HZvu2IO+J4tex4HeEVmxi4DiR/SDbo6+S8wxxI77vO10SntFR1mGRu5fYR2Jf7BkjdewC17HQEHwVxTaB4cM+iz6O2bTm4OIAuNNMyeSdY5xkOEEGIIM+By6hZuLQBm7Pl8yitF8xbcQD4JRjy2TBvvAmdwMrnF7rkGSRnvU4thYxWEZhp5ifVCZXcM2iOA06IJD/43Dwt006q7TUbcvDhb8sczI+qeAWGb2mzOOGeu6EZnagj4CRwM21N9Oqzq23vbkGugESACc9+7qk3dsE3LSABuA+VxZV2HLhfqFm8e16doY48ch1vZQe1QMmA8ncd5CwKm3tfbW4IIiT01SNSsZyFpu026nLiqj0thkz1Tu0xq0gzcSHeiDV25psQd8xbxH3deeNe3eOttOc71U1C4Xdwj9fvJV92QZGy+qx0GDGhtHlmla4pH8xbysPRZXf0cbaSV34uoMxwkjotFotcMVjb9iZ/yGM7CR5LkOnWBAgeHX6KVXy9iFWum43ePRXpA7/ObfJVB3NHgjuM+U6WOdlUgJ96RLRNwMtYylG2Yt7jSw5yeesqjarSJAyyJy6BEo7c491pgk2tBJFxBPJZSutkMcbs7RIc0O4kA2mwBGt9dAp9+GmGBtrQRHqlR2iCO8I0iYIEbt6JszxUMEiJ6BpOsawsnGX+QxmjWME4g06NABBjQkmd5XN2l1sRhsZ578h8+KFV2dsCcOhsACG79+6yoW7gIbIvxvkOSSSAZPaMWBteOJg3jkq1NtBABJvlkCdTHE5Sl9rexrQIkHI6kHz0QmEPIdBvA7ovx8irjBVYh2rSJiHQYkCbuAzndbxSThUF5AA0DiZsorUn5zZ0Tk1wlwkwb6i4Us2J0STzznruWipeRE/5oJBcwgDIgxrJmRfNR+OYfzYRN+7MH59N6qdlLiWyJJid+UfVD/yqo0TIBkFov3he88IHjwVrtgGFRlyQcR1Om9Tgm1pveDzzQRs5aYLpzkzOu9NmAJE28OMTyySbS4AA/YAbmpHAib87ShHs5oiH8b6orqgOeHwz570s9+jT0uhOXsAvu2DUm2/nPzVTVGgA+9fJLODs449Pkhvr54uXmrUbAZq1gYEwdIFv0/Vcgh4Fjr4cwuToC7WjU3+ypYCMgI359YRKOzl1yIzy4cVerHLI5Z8OWazcvBVCz2kwYGk3jpbJRQokuuYyE5Z6T1zTLm+EkgWvrn1XYjEXgfDw3X1yyRk62FQJ4EgEgESIBBsLTIzUHaCMgABa2vH73ojtgkXLSbRBm1+mvkhu2I2BcIAMcz9+SacH5A5m2HdAPHh5ZIQrfwkyMkz/AJa3AXYhYgXJBkzpuyXU6VOTMGMoJAkZqk4eBUK0qTnd4nCLxYmYgAcBxWk2ucIEGREZiRbK3A8bFDeWekA5cZVXbWWOysLiCRFoFp4lKXy8AHPaUC5Nhadwtcwhv26qTbKw36jPqs+o8OkwSbXJyAt6kHou2apEgZW717byn2o80Fmye0oIGEAawBckQZRm7SHiRnlGHKco8CsWiAXDEZE5i+aDU2h123Gk8NFPZT4HZufiIkS3Dkd5m9tZyCBVcA4nBmBzIiyQpbccs4tOp4FMP2pxu+JzHATMJdtoC3vWHIeluiXewzaI00JNkYYXA4TGngZP7LqjXi0AzFhfcU1sIAxrhIki6oWk5+MEpllbFZpj73K9QvH8wOotu3ck8twEvdib58NxUozX/Zz/AGXJuTAq+oXG9v13owAIADZ5nndVp1s4G+0a/NEI1PElQaIA2lB7xtmQ35bv0RWs1BkE5H0suxeGswuZYk87b5ySdiIdXIkC3EAfYVHVz4kRMTzAVMBiS6TN9eahoByF9PvVWkiQv4o5HhhBEnO+FT71oERnMxfxXVNkMC95A4yb+Mgq1WgWAHUgy0iDElp4HIpfHwFAmOzBEAZWvbKD96qtcjC3OZMic/RVLbA2Eb7k8lIqECdBIHCc58ArQiKbBincCba4clduFxdAIs6BaG3GfCAUIRMcMjbn1QqlWLZDIRfx81VWBctDGwCS6ekaRxzVKlQze5gHxAQfeaqRUMmdf29ArUQOazObfe9HpmDYz+qCHmI0+9V0m8Z/tkh7gXe+/X1Rqe2ZQL7/ABSxaTca6ffJc1s85/ZJxT5A0BUa5ukjMalWndHXP7us/D+8ogdxIUOAGi+k063A0jVQk6dzcxaxzyXKKryAYgA59cwBquJDt51BNpv+ithEkfeSE0iTefSOA5oNC7dp0id+QPLkhvfyg5cEXu27oJO85dUahTjL0kzz0UtpCoE2nafE5bp+SLToiZyjI7955I7y0ZjPW2unO3khEHNx898qM7KotU2q8DSLnrmEB9aCCSDAg2nFJJt4ogOL4jI4Aa6Kjb5RlA0G7p+qcUhPcE4cBHFBNUCRw4gZ5K8ubrYi/EGbKHNBg205Z+V1qiCgaYiP4vv0Sh/X73p6pEkUyQI1NySIMc1WlSuL+FsgPqrUqELgSQDY25foubS0O83RTszuEiOCrUa4RvN4V36HRDhAhc0agjI/SFDaWpN9BxUCnPS5neUhEgLpJ+9/FDc0i/FWaI1049EwLNJ6KWmRndDeNw6Z2V6bbiTG8g5b4lFAWxRmPouUYbSDaYC5LYBl1XO9vlCCBkf0Ubhw+aKxoLnA5W9FnVGjKgjOPP5otJ5JiTw10lBZYu4R6Jig0FrXanECeGXzUyEi4qkmBDjn4apgZSSMzqLkjxO9ImxtbPK2oHzTDxJI3Nd5Aws5JFWRWcZJJ7xM5BoBLrnDzJ9VNOq17u/uPCbb96o4Tne3oLX6lTtVqYj+L/xaml4JsSqAgjcSCPG3NWZYkEwRYf1ZDI+m4IecKjLtB5+o+q9FbEF/eRbX7+iMHd2QbxYb7/fglyLE8R5z9EXaRDmgfwt9AhoCrKhz8TuUPfbD0B+niqFxzVXlUkNF2gwZk5b+KMxxcbgC28CYGpQ6eXj6fqVduiTETTaN36qtSk6YtGWkqrx3j1VpuEgKYCATHzCq8QMsyjMuQNIV6guBpiI6SnYCQnNci1guVcgf/9k=" alt="HITEC City">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Tanjavur</h2>
+                        <div class="amenities">
+                            <span>Rice Bowl of Tamil Nadu</span>
+                        </div>
+                        <p class="description">Thanjavur district is called 'The Rice Bowl of Tamil Nadu' because of its agricultural activities in the delta region of river Cauvey. The temple, culture and architecture of Thanjavur are famous throughout world.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indore Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="cultural hotspots/udaipur.html">
+                        <img src="https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/Jagdish-Temple-1-1.jpg" alt="Rajwada Palace">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Udaipur</h2>
+                        <div class="amenities">
+                            <span>City of Lakes</span>
+                        </div>
+                        <p class="description">Udaipur was discovered by Maharana Udai Singh in 1553. In the year 2009, Udaipur was named the best city in the world by a magazine. Udaipur is famous for its lakes, beautiful palaces, mountains, rooms and tiger gardens. There are also many royal palaces here that have been converted into luxurious hotels today. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleHeart(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

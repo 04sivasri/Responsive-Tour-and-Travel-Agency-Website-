@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 240px; /* Fixed height for consistency */
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-container {
+            width: 200px;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            stroke: #666;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .heart-icon.active svg {
+            fill: #ff0000;
+            stroke: #ff0000;
+        }
+
+        .hotel-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hotel-details {
+            flex-grow: 1;
+        }
+
+        .tourism-place {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .amenities {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.5;
+            font-size: 14px;
+            height: 120px; /* Fixed height for descriptions */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+        }
+
+        @media (max-width: 768px) {
+            .hotel-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 200px;
+            }
+
+            .description {
+                height: auto;
+                -webkit-line-clamp: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hotel-list">
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Historical Sites/north.html">
+                        <img src="https://i.pinimg.com/474x/6e/6a/b6/6e6ab62fdf01c681e0226278ffb38213.jpg" alt="Qutub Minar">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>    
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Qutub Minar</h2>
+                        <div class="amenities">
+                            <span>🏛️ Northern India</span>
+                        </div>
+                        <p class="description">Qutub Minar, located in Delhi, is a UNESCO World Heritage Site and the tallest brick minaret in the world, standing at 72.5 meters. Built in 1193 by Qutb-ud-din Aibak and later completed by his successors, it showcases Indo-Islamic architecture with intricate carvings and inscriptions. The monument symbolizes the beginning of Muslim rule in India and remains a major tourist attraction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Historical Sites/south.html">
+                        <img src="https://i.pinimg.com/474x/38/8f/02/388f024c9d600fc400c6e5bb7fefeac2.jpg" alt="Hampi">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Hampi</h2>
+                        <div class="amenities">
+                            <span>🏛️ Southern India</span>
+                        </div>
+                        <p class="description">Hampi, a UNESCO World Heritage Site in Karnataka, was once the capital of the Vijayanagara Empire. It features stunning temple ruins, stone-carved monuments, and the famous Virupaksha Temple. Surrounded by boulder-strewn landscapes, Hampi is a paradise for history lovers and travelers.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Historical Sites/east.html">
+                        <img src="https://i.pinimg.com/474x/0a/32/3a/0a323adc9c6fc4e5c6ed2a0b1627fd0d.jpg" alt="Jagannath Temple">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Jagannath Temple</h2>
+                        <div class="amenities">
+                            <span>🛕 Eastern India</span>
+                        </div>
+                        <p class="description">Located in Puri, Odisha, the Jagannath Temple is one of the Char Dham pilgrimage sites, dedicated to Lord Jagannath. The temple is known for its annual Rath Yatra, where massive chariots carry the deities through the city. Its unique rituals, massive kitchen, and centuries-old traditions make it a revered spiritual destination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Historical Sites/west.html">
+                        <img src="https://i.pinimg.com/236x/e9/7b/b5/e97bb53acb172405eff5b3356cd41d7f.jpg" alt="Mehrangarh Fort">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Chittorgarh Fort</h2>
+                        <div class="amenities">
+                            <span>🏰 Western India</span>
+                        </div>
+                        <p class="description">Chittorgarh Fort in Rajasthan is one of India's largest forts and a symbol of Rajput valor and sacrifice. It houses grand palaces, victory towers, and temples, narrating tales of heroic battles and Jauhar. The fort’s massive walls and historical significance make it a must-visit heritage site.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

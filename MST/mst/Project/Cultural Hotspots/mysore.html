@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Hotspots of Mysore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="https://img.freepik.com/premium-photo/mysore-palace-is-historical-palace-royal-residence-mysore-karnataka-india_36244-1368.jpg" alt="Majestic Mysore">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Mysore</h1>
+                <p>The cultural capital of Karnataka, famous for its grand palaces, royal heritage, and the vibrant Dasara festival.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <p class="quote">"A city of grandeur and tradition, where royal splendor meets artistic excellence."</p>
+    </div>
+
+    <div class="about-section">
+        <h2>Discover Mysore</h2>
+        <div class="about-content">
+            <p>Mysore, known for its palatial architecture and rich history, is a city that blends tradition with cultural vibrance.</p>
+            <p>From the iconic Mysore Palace to the serene Brindavan Gardens, Mysore offers an enchanting experience with its historic sites, thriving art scene, and grand festivities, especially during the world-famous Dasara celebrations.</p>
+        </div>
+    </div>
+
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Mysore</h2>
+        <div class="attractions-grid">
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/6e/b1/97/6eb197195f13b6960a8eeb0b2a57caf1.jpg" alt="Mysore Palace" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Mysore Palace</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">A magnificent royal residence showcasing Indo-Saracenic architecture, the pride of Mysore.</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/7a/e3/28/7ae3287d8c8e257abf52822e97ee46b2.jpg" alt="Brindavan Gardens" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Brindavan Gardens</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Famous for its symmetrically designed gardens, musical fountain, and evening light show.</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/bb/53/92/bb53920959db201214308d90e94933fa.jpg" alt="Chamundi Hill" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Chamundi Hill</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">A sacred hilltop temple dedicated to Goddess Chamundeshwari, offering breathtaking city views.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

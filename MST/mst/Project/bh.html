@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 240px;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-container {
+            width: 200px;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            stroke: #666;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .heart-icon.active svg {
+            fill: #ff0000;
+            stroke: #ff0000;
+        }
+
+        .hotel-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hotel-details {
+            flex-grow: 1;
+        }
+
+        .tourism-place {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .amenities {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.5;
+            font-size: 14px;
+            height: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+        }
+
+        @media (max-width: 768px) {
+            .hotel-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 200px;
+            }
+
+            .description {
+                height: auto;
+                -webkit-line-clamp: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hotel-list">
+            <!-- Manali Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Hills and Beaches/manali.html">
+                        <img src="https://i.pinimg.com/474x/c6/6a/4b/c66a4b067d56b6b25996b851763b9e24.jpg" alt="Manali">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Manali</h2>
+                        <div class="amenities">
+                            <span>🏔️ Mountain Retreat</span>
+                        </div>
+                        <p class="description">Nestled in the Himalayas, Manali is a breathtaking destination offering stunning mountain landscapes, ancient temples, and adventurous experiences. Visitors can explore lush valleys, engage in thrilling activities like paragliding and trekking, and immerse themselves in the serene Himalayan environment. The town serves as a perfect gateway to high-altitude mountain passes, providing a unique blend of natural beauty, spiritual tranquility, and outdoor adventures. With its picturesque scenery, rich cultural heritage, and warm hospitality, Manali promises an unforgettable mountain experience for travelers seeking both relaxation and excitement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ooty Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Hills and Beaches/ooty.html">
+                        <img src="https://i.pinimg.com/474x/b3/ab/b8/b3abb8aa5bfd63a9ca6b58b4836394f0.jpg" alt="ooty">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Ooty</h2>
+                        <div class="amenities">
+                            <span>🍃 Tea Garden</span>
+                        </div>
+                        <p class="description">Situated in the Nilgiri Hills, Ooty is a captivating hill station renowned for its lush tea plantations, scenic landscapes, and pleasant climate. Visitors can explore the famous Botanical Gardens, take a ride on the historic Nilgiri Mountain Railway, and enjoy panoramic views of the surrounding valleys. The town offers a perfect retreat with its cool temperatures, verdant greenery, and colonial-era charm. Ooty provides a unique blend of natural beauty, cultural experiences, and peaceful mountain atmosphere, making it an ideal destination for nature lovers, photographers, and those seeking a serene mountain getaway.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Darjeeling Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Hills and Beaches/darjeeling.html">
+                        <img src="https://i.pinimg.com/474x/e4/97/92/e4979240bd9836dd0c580d626056d3c1.jpg" alt="Darjeeling">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Darjeeling</h2>
+                        <div class="amenities">
+                            <span>🚂 Toy Train</span>
+                        </div>
+                        <p class="description">Perched in the Eastern Himalayas, Darjeeling is a mesmerizing hill station famous for its world-renowned tea, stunning mountain views, and colonial heritage. The town offers breathtaking panoramas of Mount Kanchenjunga and vibrant tea gardens that carpet the landscape. Visitors can experience the iconic Darjeeling Himalayan Railway, a UNESCO World Heritage Site, which winds through picturesque mountain scenery. With its cool climate, rich cultural tapestry, and spectacular natural beauty, Darjeeling provides an enchanting destination that combines historical charm, natural splendor, and a unique mountain lifestyle for travelers seeking an unforgettable Himalayan experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goa Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Hills and Beaches/goa.html">
+                        <img src="https://i.pinimg.com/474x/f7/e7/29/f7e72914fef0de3b5cd1bcf4298df252.jpg" alt="Goa">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Goa</h2>
+                        <div class="amenities">
+                            <span>🏖️ Beach Paradise</span>
+                        </div>
+                        <p class="description">A coastal paradise along the Arabian Sea, Goa offers a unique blend of vibrant beaches, rich Portuguese heritage, and diverse cultural experiences. North Goa buzzes with energy, featuring popular beaches, numerous beach shacks, water sports, and an electrifying nightlife scene. South Goa provides a more tranquil experience with serene landscapes and peaceful beaches. Visitors can explore historic churches, indulge in delicious seafood, experience water adventures, and immerse themselves in the distinctive Goan lifestyle. With its perfect combination of relaxation, adventure, and cultural richness, Goa promises an unforgettable tropical vacation for every type of traveler.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Varkala Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Hills and Beaches/kerala.html">
+                        <img src="https://i.pinimg.com/736x/1d/a6/b4/1da6b4bc5bfd8e8e30a7f2b67de909fd.jpg" alt="varkala">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Kerala</h2>
+                        <div class="amenities">
+                            <span>🌊 Cliff Beach</span>
+                        </div>
+                        <p class="description">A unique coastal destination in Kerala, Varkala is distinguished by its dramatic cliff formations overlooking the Arabian Sea. The town offers a perfect blend of natural beauty, spiritual significance, and modern amenities. Visitors can explore the vibrant cliff-top area lined with cafes, yoga retreats, and Ayurvedic centers. Papanasam Beach provides therapeutic waters and stunning sunset views, attracting both pilgrims and tourists. With opportunities for water sports, temple visits, and holistic wellness practices, Varkala presents a distinctive coastal experience that combines relaxation, adventure, and cultural immersion in a breathtaking natural setting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleHeart(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/d2/f5/68/d2f5684fc8bd3cbcf7a1639f18fb75f2.jpg" alt="Goa ">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Goa</h1>
+                <p>
+                    Goa, where golden beaches meet the turquoise sea and every sunset paints the sky with colors of tranquility and adventure.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">Goa, where the golden sands embrace the azure waters, and every sunset reveals a symphony of colors, offering a perfect escape into nature, culture, and endless memories.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Goa</h2>
+        <div class="about-content">
+            <p>Nestled along the Arabian Sea, Goa thrives as a vibrant destination where golden beaches, rich culture, and lively energy combine to create an unforgettable experience for every traveler.</p>
+            <p>Goa, where the sun kisses golden beaches and the rhythmic waves echo the vibrant spirit of the land. From the colorful streets to the historic forts and lively markets, this coastal paradise blends rich culture with natural beauty. Explore the vibrant nightlife, indulge in delectable seafood, and relax by the serene shores. Whether you're unwinding in the tranquility of hidden beaches or dancing under the stars, Goa offers a perfect blend of adventure and relaxation for every traveler.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Goa</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/f4/f0/cb/f4f0cb6f38f8b927e9b0a07a47469e86.jpg" alt="Baga Beach" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Baga Beach</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(6,831 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Baga Beach, one of Goa’s most popular destinations, is a vibrant blend of golden sands, lively nightlife, and refreshing waters. Known for its vibrant beach shacks and thrilling water sports, Baga offers an energetic atmosphere perfect for both relaxation and adventure. Whether you're soaking up the sun, indulging in beachside treats, or dancing to the rhythm of live music, Baga Beach captures the essence of Goa’s energetic spirit.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/7c/36/7f/7c367f3b73b2b93604219530631e271b.jpg" alt="Calangute Beach" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Calangute Beach</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(5,969 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Calangute Beach, often referred to as the "Queen of Beaches," is one of Goa’s most iconic and bustling beaches. With its expansive golden sands, crystal-clear waters, and lively atmosphere, it’s perfect for sunbathing, swimming, and enjoying water sports. The beach is lined with vibrant shacks serving delicious seafood and offering refreshing drinks, making it a popular spot for both relaxation and socializing.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/79/4e/ee/794eee3a9eeadd04c9d26ac5114200bf.jpg" alt="Bogmolo" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Bogmolo</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,419reviews)</span>
+                    </div>
+                    <p class="attraction-description">Bogmalo Beach is a serene and less crowded beach located in South Goa, just a short drive from Dabolim Airport. Known for its calm waters and golden sands, it is a perfect getaway for those looking to relax in a quieter environment compared to the more famous beaches like Calangute or Baga.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

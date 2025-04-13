@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Booking</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #cdca, #cdca);
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #d10e69;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .form-section {
+      padding: 20px 30px;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-group button {
+      background-color: #d10e69;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .form-group button:hover {
+      background-color: #155cb5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 20px;
+      background: #1a73e8;
+      color: white;
+      margin-top: 20px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bus Booking</h1>
+  </header>
+
+  <div class="container">
+    <div class="form-section">
+      <h2>Book Your Bus Ticket</h2>
+      <form action="/book-bus" method="POST">
+        <div class="form-group">
+          <label for="departure">Departure Station:</label>
+          <select id="departure" name="departure" required>
+            <option value="" disabled selected>Select your departure</option>
+            <option value="station_a">Rajahmundry</option>
+            <option value="station_b">Vizag</option>
+            <option value="station_c">Srikakulam</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="arrival">Arrival Station:</label>
+          <select id="arrival" name="arrival" required>
+            <option value="" disabled selected>Select your arrival</option>
+            <option value="station_x">Rajahmundry</option>
+            <option value="station_y">Vizag</option>
+            <option value="station_z">Srikakulam</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Journey Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="passengers">Number of Passengers:</label>
+          <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit"><i class="fas fa-train"></i> Book Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Bus Booking System. All rights reserved.</p>
+  </footer>
+</body>
+</html>

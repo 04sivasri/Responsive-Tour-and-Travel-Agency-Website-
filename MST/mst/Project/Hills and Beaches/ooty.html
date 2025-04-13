@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/5f/3c/88/5f3c8880e810af31c8878218beb19d16.jpg" alt="">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Ooty</h1>
+                <p>Ooty, where emerald hills embrace the sky, and every breeze carries the fragrance of tea gardens and the whispers of serene lakes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">Ooty, where rolling tea gardens and colonial charm blend seamlessly, every path whispers tales of tranquility, nature, and timeless beauty, inviting you to explore, unwind, and be enchanted.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Ooty</h2>
+        <div class="about-content">
+            <p>In the heart of the Nilgiri Hills, Ooty flourishes as a town where colonial charm blends with lush greenery and serene lakes, offering a journey that captivates every traveler.</p>
+            <p>In the heart of the Nilgiri Hills, Ooty is a tranquil retreat where rolling tea estates, mist-covered valleys, and colonial-era charm blend in perfect harmony. Known for its picturesque landscapes and cool, refreshing climate, this enchanting hill station offers a unique mix of relaxation and adventure. From the historic Nilgiri Mountain Railway to the serene Ooty Lake, every corner of Ooty invites you to immerse yourself in its natural beauty and rich heritage. Whether you're strolling through vibrant botanical gardens, boating on crystal-clear lakes, or admiring panoramic views from Doddabetta Peak, Ooty promises an unforgettable escape into nature’s embrace.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Ooty</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/2f/38/74/2f38741c48acb0c0a77c66014b75cc4b.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Doddabetta Peak </h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(3,824 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Doddabetta Peak, the highest point in the Nilgiri Hills at 2,637 meters, offers breathtaking panoramic views of Ooty and its surroundings. Located 10 km from Ooty town, it is a popular spot for trekking and nature lovers. The peak features a Telescope House for visitors to enjoy a closer view of the stunning landscapes. Surrounded by dense shola forests, it is home to diverse flora and fauna. With its cool climate and misty charm, Doddabetta Peak is a must-visit destination in Ooty.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/75/2c/9e/752c9e55e7859e4b8d74d04f1e365e60.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Avalanche Lake</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(2,715 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Avalanche Lake, located around 28 km from Ooty, is a serene and picturesque destination surrounded by lush green forests and rolling hills. The lake is known for its calm waters and stunning views, making it perfect for nature walks, picnics, and photography. It is also a popular spot for adventure activities like trekking and camping. The area is rich in biodiversity, with unique flora and fauna. </p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/53/05/4a/53054a4b296b1a478867acc4a08d8620.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Marina Beach</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(5,893 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Marina Beach, located in Chennai, Tamil Nadu, is one of the longest urban beaches in the world, stretching over 13 km along the Bay of Bengal. Known for its golden sands, gentle sea breeze, and vibrant atmosphere, it is a popular destination for both locals and tourists. The beach is lined with historic monuments, including the Anna Memorial and the M.G.R. Memorial, adding a cultural touch to the natural beauty.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

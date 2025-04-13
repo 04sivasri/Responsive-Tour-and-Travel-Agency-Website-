@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Hotspots of Udaipur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="https://plus.unsplash.com/premium_photo-1661964079694-ccfaf7dc8028?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dWRhaXB1cnxlbnwwfHwwfHx8MA%3D%3D" alt="Enchanting Udaipur">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Udaipur</h1>
+                <p>Known for its stunning lakes, palaces, and rich cultural heritage, Udaipur is a romantic city filled with history and charm.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <p class="quote">"The city of lakes, where history meets beauty, and every sunset over the water tells a timeless story."</p>
+    </div>
+
+    <div class="about-section">
+        <h2>Discover Udaipur</h2>
+        <div class="about-content">
+            <p>Udaipur, often called the 'Venice of the East', captivates visitors with its breathtaking lakes, majestic palaces, and vibrant culture.</p>
+            <p>From the iconic City Palace to the serene Lake Pichola, Udaipur is a city where tradition and elegance create an unforgettable experience. Whether you're exploring its rich Rajasthani heritage, savoring local cuisine, or enjoying a boat ride on the lake, Udaipur promises a journey full of charm and grandeur.</p>
+        </div>
+    </div>
+
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Udaipur</h2>
+        <div class="attractions-grid">
+            <div class="attraction-card">
+                <img src="https://media1.thrillophilia.com/filestore/jnhicsz9wf9kpiwvqe3bzsz1edzg_1605795365_shutterstock_197923865.jpg" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>City Palace</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">A majestic palace overlooking Lake Pichola, showcasing stunning architecture and royal heritage.</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://treeofliferesorts.com/wp-content/uploads/2022/10/lake-pichola-1024x684-1.jpg" alt="Lake Pichola" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Lake Pichola</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">A serene and picturesque lake, perfect for boat rides and breathtaking sunset views.</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWUPCqesqU5axDwlH2J5Le1i44gLbes3WQ3A&s" alt="Jag Mandir" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Jag Mandir</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,345 reviews)</span>
+                    </div>
+                    <p class="attraction-description">An exquisite island palace on Lake Pichola, known for its scenic beauty and regal ambiance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

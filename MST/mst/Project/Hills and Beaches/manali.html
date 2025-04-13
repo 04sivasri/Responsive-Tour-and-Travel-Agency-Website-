@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/92/d7/26/92d7269866d88f3cd4d164c8ce5fe16d.jpg" alt="">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Manali</h1>
+                <p>Manali, a magical blend of snow-capped peaks, lush valleys, and endless adventure.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">Manali, where towering peaks and serene valleys come together to create nature's masterpiece. An enchanting haven for adventure seekers and peace lovers alike.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Manali</h2>
+        <div class="about-content">
+            <p>Amidst the towering Himalayas, Manali shines as a paradise where snow-clad peaks embrace lush green valleys, offering an experience that blends adventure with peaceful beauty.</p>
+            <p>In the lap of the majestic Himalayas, Manali is a serene retreat where snow-capped peaks, lush valleys, and vibrant alpine meadows harmonize perfectly. Famous for its breathtaking landscapes and invigorating climate, this captivating hill station offers a perfect blend of adventure and relaxation. From the scenic Solang Valley to the tranquil Beas River, every corner of Manali invites you to experience its natural charm and rich culture.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Manali</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/c0/dc/df/c0dcdf0f9d9b2a276d56586c53114864.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Solang Valley </h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(5,247 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Solang Valley, located near Manali, is a paradise for adventure seekers with activities like paragliding, skiing, and zorbing. Surrounded by majestic snow-capped peaks and lush meadows, it offers breathtaking views of the Himalayas. Whether you're visiting in winter for snow sports or in summer for its green beauty, Solang Valley promises a memorable experience. It’s also a gateway to Rohtang Pass, adding to its charm.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/f2/71/2b/f2712b110ac860a2600890b40543898a.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Kullu</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(4,111 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Kullu is a vibrant town located in the heart of the Kullu Valley, known for its stunning natural beauty and rich cultural heritage. Surrounded by lush green valleys, majestic mountains, and the Beas River, Kullu offers a perfect blend of adventure and tranquility. The town is famous for its apple orchards, temples, and the annual Kullu Dussehra festival, which draws visitors from all over the world.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/b2/16/b6/b216b6dc479b6acb734715c2b8e58f94.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Ola Manali</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,619 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Old Manali is a charming, tranquil area located a short distance from the main town of Manali. Known for its peaceful vibe, it is surrounded by lush green landscapes, apple orchards, and towering pine trees. The area features narrow lanes lined with cozy cafes, guesthouses, and shops selling local handicrafts. It's a perfect spot to relax, enjoy the serene beauty of the Beas River, and immerse yourself in the laid-back atmosphere of the mountains.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

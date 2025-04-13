@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://specialplacesofindia.com/wp-content/uploads/2024/07/states-in-west-india.webp" alt="Enchanting Western India">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Western India</h1>
+                <p>Discover the majestic historical sites of Western India, where ancient caves, temples, and royal structures stand as symbols of rich culture and heritage.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">"From the ancient rock-cut caves to the intricate temple architecture, Western India is a living testament to the art, culture, and devotion of centuries gone by."</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Western India</h2>
+        <div class="about-content">
+            <p>Western India is home to some of the most awe-inspiring historical sites that reflect the rich spiritual and architectural heritage of the region. Whether you're exploring the awe-inspiring Ajanta Caves, the sacred Somnath Temple, or the majestic Rani Ki Vav, each site offers a unique glimpse into India's past.</p>
+            <p>The region combines ancient rock-cut architecture with a rich history of kings and kingdoms, making it one of India's most captivating cultural hotspots. A journey through Western India is a journey through time, filled with art, faith, and history.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Historical Sites in Western India</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://res.klook.com/image/upload/c_fill,w_750,h_563/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/gvl3vc6jxsfnskydjoxo.jpg" alt="Ajanta Caves" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Ajanta Caves</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(5,000 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Ajanta Caves are a series of ancient rock-cut Buddhist cave monuments, famous for their exquisite paintings, sculptures, and historical significance. A UNESCO World Heritage Site, these caves date back to the 2nd century BC.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://static.toiimg.com/thumb/msid-46918916,width-550,height-433/46918916.jpg" alt="Somnath Temple" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Somnath Temple</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(4,200 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Somnath Temple, located in Gujarat, is one of the twelve Jyotirlinga shrines of Lord Shiva. It is renowned for its rich history and stunning coastal architecture, drawing pilgrims and visitors from around the world.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/11/17/Pictures/rani-ki-vav_017f49d6-ea6c-11e8-9b97-bd22f81a225c.jpg" alt="Rani Ki Vav" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Rani Ki Vav</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(4,800 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Rani Ki Vav, a stepwell located in Patan, Gujarat, is a UNESCO World Heritage Site known for its stunning architecture and intricate sculptures. Built during the 11th century, it serves as a beautiful example of ancient water management and craftsmanship.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

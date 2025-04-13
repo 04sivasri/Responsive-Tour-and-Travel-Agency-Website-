@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/90/70/a5/9070a5760d18719f30d53c9f6383dfe7.jpg" alt="Darjeeling ">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Darjeeling</h1>
+                <p>Darjeeling, where the mist dances with the peaks and every breeze carries the whispers of nature's beauty.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">Darjeeling, where misty mountains and colonial charm meet, every street whispers tales of history, nature, and serene beauty, inviting you to explore, unwind, and be mesmerized.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Darjeeling</h2>
+        <div class="about-content">
+            <p>In the foothills of the Himalayas, Darjeeling flourishes as a town where colonial charm blends with breathtaking natural beauty, offering a journey that captivates every explorer.</p>
+            <p>Nestled in the lap of the Eastern Himalayas, Darjeeling is a serene retreat where misty hills, lush tea gardens, and colonial-era architecture come together in perfect harmony. Known for its spectacular sunrise views over the majestic Kanchenjunga, this charming hill station offers a unique blend of adventure and tranquility. From the iconic toy train ride to the peaceful monasteries, every corner of Darjeeling invites you to explore its rich cultural heritage and natural splendor. Whether you’re trekking through pine forests, sipping tea amidst the rolling hills, or soaking in the stunning vistas, Darjeeling promises an unforgettable experience.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Darjeeling</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/4e/e8/19/4ee81942afbe9129c44cc0dc8901434d.jpg" alt="Tea gardens" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Tea Gardens</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(4,684 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Darjeeling’s tea gardens are a sight to behold, stretching across the rolling hills in a breathtaking patchwork of green. These lush plantations are famous for producing the world-renowned Darjeeling tea, known for its delicate flavor and unique aroma. Visitors can explore the tea estates, such as Makaibari, Happy Valley, and Singtom, where they can witness the traditional tea-making process.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/41/87/3d/41873d19186345f168a91dfafbdca378.jpg" alt="Tiger Hill" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Tiger Hill</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(3,184 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Tiger Hill in Darjeeling is one of the most famous and sought-after destinations for sunrise views. Located at an elevation of 2,590 meters, it offers a stunning panoramic view of the snow-capped peaks of the Kanchenjunga range, with the first rays of sunlight illuminating the mountains in a golden glow. The view of the Kanchenjunga, the third-highest peak in the world, is truly a sight to behold and is often considered one of the best sunrise points in India. </p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/25/f4/69/25f469411f0b7abbb9d4aa4a4db0b792.jpg" alt="Mirik Lake" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Mirik Lake</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(4,892reviews)</span>
+                    </div>
+                    <p class="attraction-description">Mirik Lake, nestled in the tranquil town of Mirik, is one of Darjeeling's most serene and picturesque spots. Surrounded by lush green hills and dense pine forests, this beautiful lake offers a peaceful retreat from the hustle and bustle of city life. Visitors can enjoy a leisurely boat ride on the calm waters, taking in the stunning views of the surrounding landscape and the majestic Kanchenjunga in the distance.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

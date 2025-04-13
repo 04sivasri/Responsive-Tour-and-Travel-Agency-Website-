@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/14/eb/fc/14ebfc7a8513757e9665a02b399baceb.jpg" alt="">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Kerala</h1>
+                <p>Kerala, God's own country, where lush landscapes meet tranquil waters, offering a serene escape into nature's embrace.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">Kerala, where the backwaters embrace the shore and every wave sings the song of tranquility, inviting you to experience nature’s perfect harmony.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Kerala</h2>
+        <div class="about-content">
+            <p>In the heart of southern India, Kerala is a land of unmatched beauty where verdant hills, tranquil backwaters, and golden beaches come together in perfect harmony. Known as "God's Own Country," Kerala offers a mesmerizing blend of lush landscapes, vibrant culture, and ancient traditions. From the serene houseboat cruises through the backwaters of Alleppey to the mist-covered hills of Munnar, Kerala invites you to experience nature's splendor at its finest. Whether you're exploring the spice plantations, relaxing by the beach, or immersing yourself in its rich heritage, Kerala promises an enchanting journey that captures the soul.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Kerala</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/78/39/59/783959285c1ace76beb9e625a1caec71.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Munnar</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(5,927 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Munnar, a hill station in Kerala, is a picturesque paradise where mist-covered hills, sprawling tea plantations, and fragrant spice gardens blend to create an enchanting retreat. Known for its cool climate, lush greenery, and serene atmosphere, Munnar invites travelers to unwind amidst nature’s beauty. Whether you're trekking through the hills, boating on tranquil lakes.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/54/3d/f5/543df560cdcb729f5b203b0a64cad328.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Wayanad</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(5,981 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Wayanad, nestled in the Western Ghats of Kerala, is a tranquil haven where verdant landscapes, cascading waterfalls, and wildlife sanctuaries create a perfect retreat for nature lovers. Known for its picturesque villages, serene lakes, and lush forests, Wayanad offers a peaceful escape into the heart of nature. Whether you're hiking through the Edakkal Caves, spotting wildlife in the Wayanad Wildlife Sanctuary. </p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/71/87/c3/7187c3b522e7dd151e609d0e19c50574.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Varkala Beach</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(3,689 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Varkala Beach, located in the coastal town of Varkala in Kerala, is a stunning destination where golden sands meet the azure waters of the Arabian Sea. Known for its dramatic cliffs and natural springs, this beach offers a unique blend of beauty and serenity. The Papanasam Beach, as it is also called, is considered sacred by many and attracts visitors seeking spiritual solace and relaxation.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

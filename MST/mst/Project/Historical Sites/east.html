@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/04/01114836/UNESCO-Sites-North-East-India-1.jpg?tr=w-1200,q-60" alt="Enchanting Eastern India">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Eastern India</h1>
+                <p>Explore the treasures of Eastern India, where ancient temples and colonial grandeur blend to offer a rich historical experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">"In the heart of Eastern India, the sun, the architecture, and the culture come together to create a vibrant history of divine and royal magnificence."</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Eastern India</h2>
+        <div class="about-content">
+            <p>Eastern India is home to a wealth of historical and architectural wonders that reflect the spiritual and royal heritage of the region. From grand temples to colonial-era buildings, this region offers a deep dive into India's diverse history.</p>
+            <p>Whether you're marveling at the intricate carvings of Konark Sun Temple, admiring the sacred Lingaraj Temple, or basking in the grandeur of the Victoria Memorial, Eastern India invites you to explore a world where ancient traditions and colonial influences co-exist in harmony.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Historical Sites in Eastern India</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://cdn.britannica.com/19/251919-050-D3E64798/konark-sun-temple-orissa-india-unesco-heritage-site.jpg" alt="Konark Sun Temple" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Konark Sun Temple</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(4,500 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Konark Sun Temple, a UNESCO World Heritage Site, is an architectural marvel dedicated to the Sun God. Its intricate stone carvings and the chariot-shaped temple leave visitors awestruck by its grandeur and engineering brilliance.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://famoustemplesofindia.com/wp-content/uploads/2024/04/Lingaraj-Temple-1-1024x680.jpg" alt="Lingaraj Temple" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Lingaraj Temple</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(3,800 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Lingaraj Temple in Bhubaneswar is one of the largest and oldest temples dedicated to Lord Shiva. With its exquisite Kalinga architecture, it remains an important pilgrimage site for Hindus.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://banglatravelguide.com/wp-content/uploads/2023/07/Victoria-Memorial-Kolkata.jpg" alt="Victoria Memorial" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Victoria Memorial</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(5,200 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Victoria Memorial in Kolkata, an iconic symbol of British rule, blends classical European architecture with Mughal influences. It stands as a tribute to Queen Victoria and a testament to the British colonial era in India.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>
